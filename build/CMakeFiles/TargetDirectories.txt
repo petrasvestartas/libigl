@@ -1,5 +1,0 @@
-/home/petrasv/brg/code/cmake_examples/libigl/build/CMakeFiles/external_downloads.dir
-/home/petrasv/brg/code/cmake_examples/libigl/build/CMakeFiles/example.dir
-/home/petrasv/brg/code/cmake_examples/libigl/build/CMakeFiles/format.dir
-/home/petrasv/brg/code/cmake_examples/libigl/build/CMakeFiles/edit_cache.dir
-/home/petrasv/brg/code/cmake_examples/libigl/build/CMakeFiles/rebuild_cache.dir

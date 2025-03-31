@@ -1,1 +1,0 @@
-/home/petrasv/anaconda3/bin/c++  -g CMakeFiles/example.dir/quad_mesh_planarization.cpp.o -o example  -lpthread
