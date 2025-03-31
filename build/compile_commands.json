@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/petrasv/brg/code/cmake_examples/libigl/build",
+  "command": "/home/petrasv/anaconda3/bin/c++  -I/home/petrasv/brg/code/cmake_examples/libigl/external/eigen -I/home/petrasv/brg/code/cmake_examples/libigl/external/libigl/include  -g -o CMakeFiles/example.dir/quad_mesh_planarization.cpp.o -c /home/petrasv/brg/code/cmake_examples/libigl/quad_mesh_planarization.cpp",
+  "file": "/home/petrasv/brg/code/cmake_examples/libigl/quad_mesh_planarization.cpp",
+  "output": "CMakeFiles/example.dir/quad_mesh_planarization.cpp.o"
+}
+]

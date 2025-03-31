@@ -1,0 +1,7 @@
+BasedOnStyle: Google
+ColumnLimit: 0  # Disable line splitting
+AllowShortBlocksOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true

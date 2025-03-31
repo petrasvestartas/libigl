@@ -7,6 +7,9 @@ include(ExternalProject)
 set(EXTERNAL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external")
 set(EIGEN_SOURCE_DIR "${EXTERNAL_DIR}/eigen")
 set(LIBIGL_SOURCE_DIR "${EXTERNAL_DIR}/libigl")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
+# Enable parallel builds
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Create a custom target for all external dependencies
 add_custom_target(external_downloads ALL)
@@ -56,7 +59,7 @@ include_directories(
 )
 
 # Add an example source file
-set(EXAMPLE_SOURCE_FILE ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
+set(EXAMPLE_SOURCE_FILE ${CMAKE_CURRENT_SOURCE_DIR}/quad_mesh_planarization.cpp)
 
 # Add the example executable
 add_executable(example ${EXAMPLE_SOURCE_FILE})
@@ -69,3 +72,18 @@ target_include_directories(example PRIVATE
     ${EIGEN_INCLUDE_DIR}
     ${LIBIGL_INCLUDE_DIR}
 )
+
+# Link pthread library# Add a custom target for formatting
+add_custom_target(format
+    COMMAND clang-format -i ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
+    COMMENT "Formatting C++ files"
+)
+
+# Ensure that the format target runs before building the example
+add_dependencies(example format)
+find_package(Threads REQUIRED)
+target_link_libraries(example PRIVATE Threads::Threads)
+
+# Debug
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+

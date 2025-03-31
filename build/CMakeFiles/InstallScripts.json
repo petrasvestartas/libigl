@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/petrasv/brg/code/cmake_examples/libigl/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
