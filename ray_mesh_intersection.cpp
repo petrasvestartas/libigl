@@ -3,6 +3,11 @@
 #include <igl/readOFF.h>
 
 #include <iostream>
+#include <cmath>
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 using RowMatrixXd =
     Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>;
@@ -114,10 +119,10 @@ int multiple_rays() {
   directions.resize(num_rays * num_rays, 3);
 
   int index = 0;
-  for (int i = 0; i < num_rays; ++i) {
+  for (int i = 0; i < num_rays; i++) {
     double theta =
         static_cast<double>(i) / num_rays * M_PI;  // Angle in the range [0, pi]
-    for (int j = 0; j < num_rays; ++j) {
+    for (int j = 0; j < num_rays; j++) {
       double phi = static_cast<double>(j) / num_rays * 2 *
                    M_PI;  // Angle in the range [0, 2*pi]
       double x = r * sin(theta) * cos(phi) + base[0];

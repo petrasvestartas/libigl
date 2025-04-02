@@ -4,6 +4,8 @@
 ```
 mkdir build && cd build
 cmake .. && cmake --build . -- -j  && ./example
+cd .. && rmdir /s /q build && mkdir build && cd build && cmake .. && cmake --build . --config Debug --parallel
+.\Debug\LibiglExample.exe
 ```
 
 ## Debug
